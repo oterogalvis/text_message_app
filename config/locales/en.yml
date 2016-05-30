@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  errors:
+    messages:
+      blank: "need to be 10 numeric digits (no +1 needed)."
