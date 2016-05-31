@@ -25,10 +25,10 @@ class TextMessagesController < ApplicationController
   # POST /text_messages.json
   def create
     @text_message = TextMessage.new(text_message_params)
-
     respond_to do |format|
       if @text_message.save
-        format.html { redirect_to @text_message, notice: 'Text message was successfully created.' }
+        @text_message.send_text_message
+        format.html { redirect_to @text_message, notice: 'Text message was successfully send.' }
         format.json { render :show, status: :created, location: @text_message }
       else
         format.html { render :new }
