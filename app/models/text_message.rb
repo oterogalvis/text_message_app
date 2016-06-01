@@ -5,13 +5,13 @@ class TextMessage < ActiveRecord::Base
 	validates :body, presence: true
 
   def send_text_message
-	twilio_sid = "AC5bde5caa5c1c9d2c541f0874cb1259a8"
-	twilio_token = "db6f19ca55212e2decde1a31323f0322"
+	twilio_sid = "AC0faee7994cf6272b7e456ab864d5ed55"
+	twilio_token = "d903f5b92df634756b83dbf3cc6620f0"
 
 	@client = Twilio::REST::Client.new twilio_sid, twilio_token
 	message = @client.account.messages.create(:body => body,
 	    :to => "+1" + number,
-	    :from => "+18575760576")
+	    :from => "+12015911423")
   end
 
 
