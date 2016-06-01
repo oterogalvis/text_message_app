@@ -1,11 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Text Messages</h1>
+<h2>List of Text Messages</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Phone Number</th>
+      <th>Phone</th>
       <th>Message</th>
       <th colspan="3"></th>
     </tr>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= text_message.number %></td>
         <td><%= text_message.body %></td>
-        <td><%= link_to 'Show', text_message %></td>
+        <td><%= link_to 'Show', text_message %></td> 
         <!-- <td><%= link_to 'Edit', edit_text_message_path(text_message) %></td> -->
         <td><%= link_to 'Delete', text_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Text message', new_text_message_path %>
+<!-- <%= link_to 'New Text message', new_text_message_path %> -->
